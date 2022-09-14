@@ -1,0 +1,12 @@
+@import '../../vendor/styles/variables.scss';
+
+.header-logo {
+  @include opacity;
+  cursor: pointer;
+  box-sizing: content-box;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 10px solid $colors-main-1;
+}

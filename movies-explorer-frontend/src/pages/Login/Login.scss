@@ -1,0 +1,16 @@
+.register__container {
+  min-height: 700px;
+  padding: 70px 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 230px 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 55px 30px 30px;
+  }
+}

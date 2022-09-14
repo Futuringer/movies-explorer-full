@@ -1,0 +1,58 @@
+@import '../../vendor/styles/variables.scss';
+
+.input {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+    color: $colors-font-2;
+    margin-bottom: 5px;
+  }
+
+  &__field {
+    border: none;
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0 0 10px;
+    outline: none;
+    border-bottom: 1px solid $colors-stroke-2;
+    font-size: 14px;
+    line-height: 17px;
+    color: $colors-font-main;
+    font-weight: 400;
+    margin-bottom: 24px;
+
+    &:focus {
+      border-bottom: 1px solid $colors-main-2;
+    }
+
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 30px white inset;
+      -webkit-box-shadow: 0 0 0 30px white inset;
+      -webkit-text-fill-color: $colors-font-main;
+    }
+  }
+
+  &__error {
+    margin: 0;
+    padding: 0 0 6px;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+    color: $colors-main-3;
+  }
+}
+
+.input__field.input__field_error{
+  color: $colors-main-3;
+  margin-bottom: 6px;
+  
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 30px white inset;
+    -webkit-text-fill-color: $colors-main-3;
+  }
+}

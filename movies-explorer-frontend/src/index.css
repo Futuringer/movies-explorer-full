@@ -1,0 +1,21 @@
+@import url("./vendor/normalize.css");
+
+html,
+body,
+#root {
+  height: 100%;
+  position: relative;
+}
+
+input[type=checkbox] {
+  -moz-appearance:initial
+}
+
+html {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  text-size-adjust: none;
+}

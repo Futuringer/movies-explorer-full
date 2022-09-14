@@ -1,0 +1,166 @@
+@import '../../vendor/styles/variables.scss';
+
+.header {
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 18px 30px;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 18px 14px;
+  }
+
+  &__icon {
+    box-sizing: content-box;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 10px solid $colors-main-1;
+  }
+
+  &__buttons-container {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (max-width: 600px) {
+      gap: 14px;
+    }
+  }
+
+  &__button {
+    @include button;
+    color: $colors-white;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 3px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 10px;
+    }
+
+    &_active {
+      padding: 8px 20px;
+      background-color: $colors-main-1;
+      color: $colors-font-main;
+
+      @media screen and (max-width: 600px) {
+        padding: 5px 12px;
+      }
+    }
+  }
+
+  &__account-container {
+    display: flex;
+    gap: 22px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__navigation {
+    margin-left: 65px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__account-text {
+    color: $colors-font-main;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image-container {
+    font-size: 0;
+    line-height: 0;
+    padding: 10px;
+    background-color: $colors-special-1;
+    border-radius: 6px;
+    align-items: center;
+  }
+
+  &__link-image {
+    width: 10px;
+    height: 10px;
+  }
+
+  &__hamburger-container {
+    @include opacity;
+    align-items: center;
+    display: none;
+    width: 28px;
+    height: 23px;
+    margin-right: 8px;
+    cursor: pointer;
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-right: 4px;
+    }
+  }
+
+  &__hamburger {
+    display: block;
+    background-color: $colors-font-main;
+    position: relative;
+    height: 3px;
+    width: 28px;
+
+    @media screen and (max-width: 600px) {
+      height: 2.5px;
+      width: 22px;
+    }
+
+    &::before {
+      content: '';
+      background-color: $colors-font-main;
+      position: absolute;
+      height: 3px;
+      width: 28px;
+      margin-top: -10px;
+
+      @media screen and (max-width: 600px) {
+        height: 2.5px;
+        width: 22px;
+        margin-top: -9px;
+      }
+    }
+
+    &:after {
+      content: '';
+      background-color: $colors-font-main;
+      position: absolute;
+      height: 3px;
+      width: 28px;
+      margin-top: 10px;
+
+      @media screen and (max-width: 600px) {
+        height: 2.5px;
+        width: 22px;
+        margin-top: 9px;
+      }
+    }
+  }
+
+  &__account-menu {
+    display: block;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}

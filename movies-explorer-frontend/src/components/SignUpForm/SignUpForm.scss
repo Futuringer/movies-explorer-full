@@ -1,0 +1,54 @@
+@import '../../vendor/styles/variables.scss';
+
+.sign-up-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 600px) {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__header {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    color: $colors-font-main;
+    margin: 0 0 40px;
+
+    @media screen and (max-width: 600px) {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__inputs-container {
+    margin-bottom: 65px;
+  }
+
+  &__entrance-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+
+    @media screen and (max-width: 600px) {
+      padding-top: 157px;
+    }
+  }
+
+  &__form-error{
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    text-align: center;
+    color: $colors-main-3;
+
+    @media screen and (max-width: 600px) {
+      top: 125px;
+    }
+  }
+}

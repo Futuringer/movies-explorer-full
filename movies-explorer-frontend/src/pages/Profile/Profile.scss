@@ -1,0 +1,17 @@
+.profile-container {
+  min-height: 700px;
+  padding: 145px 0 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 110px;
+    //padding: 310px 0 270px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 145px 30px 40px;
+  }
+}

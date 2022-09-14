@@ -1,0 +1,86 @@
+@import '../../vendor/styles/variables.scss';
+
+.profile-form {
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+  @media screen and (max-width: 600px) {
+    justify-content: space-between;
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    color: $colors-font-main;
+    margin: 0 0 123px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 96px;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: 80px;
+    }
+  }
+
+
+  &__entrance-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 210px;
+
+    @media screen and (max-width: 600px) {
+      padding-top: 157px;
+    }
+  }
+
+  &__entrance-button {
+    @include button;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+
+    &_type_leave {
+      color: $colors-main-3;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      opacity: 0.5;
+    }
+  }
+
+  &__separator {
+    margin: 16px 0;
+    height: 1px;
+    border: none;
+    width: 100%;
+    background-color: $colors-stroke-2;
+  }
+
+  &__form-error {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 60px;
+    color: $colors-main-3;
+  }
+
+  &__form-success {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 60px;
+    color: $colors-main-1;
+  }
+}

@@ -1,0 +1,51 @@
+@import '../../vendor/styles/variables.scss';
+
+.entrance-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+
+  @media screen and (max-width: 600px) {
+    gap: 14px;
+  }
+
+  &__main-button {
+    @include button;
+    width: 100%;
+    padding: 13px 0 15px;
+    text-align: center;
+    background-color: $colors-main-2;
+    border-radius: 3px;
+    font-weight: 500;
+    color: $colors-white;
+    font-size: 14px;
+    line-height: 17px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 12px;
+      line-height: 14.5px;
+    }
+  }
+
+  &__secondary-button {
+    padding: 0;
+    margin: 0;
+    color: $colors-font-2;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 12px;
+      line-height: 14.5px;
+    }
+  }
+
+  &__link {
+    @include opacity;
+    text-decoration: none;
+    color: $colors-main-2;
+  }
+}

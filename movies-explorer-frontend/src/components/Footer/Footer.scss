@@ -1,0 +1,87 @@
+@import '../../vendor/styles/variables.scss';
+
+.footer {
+  background-color: $colors-primary-footer;
+  padding: 80px 70px 20px;
+
+  @media screen and (max-width: 786px) {
+    padding: 80px 30px 20px;
+    background-color: transparent;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 80px 10px 10px;
+  }
+
+  &__intro-text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: $colors-font-2;
+    &::after {
+      display: inline-block;
+      background-color: $colors-font-main;
+      content: '';
+      margin-top: 20px;
+      width: 100%;
+      height: 1px;
+      background-color: $colors-stroke-2;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__nav {
+    margin: 17px 0 0;
+    display: flex;
+    justify-content: space-between;
+    color: $colors-font-main;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 30px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__links-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &__list-item {
+    @include opacity;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__link {
+    color: $colors-font-main;
+    text-decoration: none;
+  }
+
+  &__year {
+    font-size: 13px;
+    line-height: 16px;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 30px;
+      font-size: 12px;
+      line-height: 15px;
+      color: $colors-font-2;
+    }
+  }
+}

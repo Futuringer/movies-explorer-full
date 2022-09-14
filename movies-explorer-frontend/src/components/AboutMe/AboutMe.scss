@@ -1,0 +1,157 @@
+@import '../../vendor/styles/variables.scss';
+
+.about-me {
+  padding: 110px 0 100px;
+
+  @media screen and (max-width: 768px) {
+    padding: 90px 0 90px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 72px 0 70px;
+  }
+
+  &__header {
+    margin: 0;
+    color: $colors-font-main;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.5px;
+    display: flex;
+    flex-direction: column;
+    &::after {
+      display: inline-block;
+      background-color: $colors-font-main;
+      content: '';
+      margin-top: 23px;
+      width: 100%;
+      height: 1px;
+
+      @media screen and (max-width: 600px) {
+        margin-top: 28px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin: 65px 0 0;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column-reverse;
+      margin-top: 60px;
+    }
+  }
+
+  &__name {
+    color: $colors-font-main;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 58px;
+    margin: 0 0 18px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__status {
+    color: $colors-font-main;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0 0 26px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+
+  &__description-container {
+    max-width: 600px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media screen and (max-width: 768px) {
+      max-width: 364px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  &__description {
+    color: $colors-font-main;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0 0 40px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+
+  &__media-links  {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__media-link  {
+    @include opacity;
+    text-decoration: none;
+    color: $colors-font-main;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    margin: 0;
+  }
+
+  &__avatar {
+    width: 270px;
+    height: 327px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 768px) {
+      width: 255px;
+      height: 307px;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+    }
+  }
+}

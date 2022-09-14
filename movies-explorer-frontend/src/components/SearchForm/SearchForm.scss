@@ -1,0 +1,110 @@
+@import '../../vendor/styles/variables.scss';
+
+.search-form {
+  &__container {
+    position: relative;
+    display: flex;
+    gap: 41px;
+    align-items: center;
+    margin-bottom: 83px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 38px;
+      margin-bottom: 57px;
+    }
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      gap: 45px;
+      margin-bottom: 44px;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    margin: 0 0 10px;
+    background-color: $colors-border-main;
+  }
+
+  &__short-film {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      gap: 12px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: $colors-font-main;
+
+    @media screen and (max-width: 600px) {
+      font-size: 11px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex: 1;
+    position: relative;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    border: 1.5px solid $colors-border-main;
+    border-radius: 24px;
+    height: 48px;
+    width: 100%;
+    padding: 7px 90px 7px 22px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $colors-font-main;
+
+    &::placeholder {
+      color: $colors-font-2;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid $colors-main-2;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 11px;
+      padding-left: 16px;
+    }
+  }
+
+  &__button {
+    @include button;
+    background-color: $colors-main-2;
+    position: absolute;
+    right: 7px;
+    padding: 6px 29px;
+    border-radius: 17px;
+    display: flex;
+  }
+
+  &__image {
+    width: 22px;
+    height: 22px;
+  }
+
+  &__error {
+    font-size: 13px;
+    line-height: 15px;
+    color: $colors-main-3;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+  }
+}

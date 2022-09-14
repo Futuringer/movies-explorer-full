@@ -1,0 +1,72 @@
+@import '../../vendor/styles/variables.scss';
+
+.portfolio {
+  margin-bottom: 125px;
+  
+  @media screen and (max-width: 786px) {
+    margin-bottom: 90px;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 70px;
+  }
+
+  &__header {
+    margin: 0 0 50px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: $colors-font-2;
+
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__links-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__links-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    @include opacity;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    color: $colors-font-main;
+
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &__link-image {
+    width:17px;
+    height: 17px;
+
+    @media screen and (max-width: 600px) {
+      width:  10px;
+      height: 10px;
+    }
+  }
+
+  &__separator {
+    margin: 20px 0;
+    color: $colors-landing-icon-1;
+  }
+}

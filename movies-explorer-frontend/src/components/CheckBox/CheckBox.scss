@@ -1,0 +1,58 @@
+@import '../../vendor/styles/variables.scss';
+
+.checkbox {
+
+  &__checkbox {
+    visibility: hidden;
+    position: relative;
+
+    &:checked::before {
+      content: '';
+      visibility: visible;
+      display: flex;
+      position: relative;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid white;
+      background: $colors-landing-4;
+      border-radius: 18px;
+    }
+
+    &:before {
+      content: '';
+      visibility: visible;
+      display: flex;
+      position: relative;
+      top: 2px;
+      left: 18px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid white;
+      background: $colors-main-1;
+      border-radius: 18px;
+    }
+  }
+
+  &__label {
+    visibility: hidden;
+    position: relative;
+    display: flex;
+    top: -4px;
+    width: 36px;
+
+    &::before {
+      content: '';
+      visibility: visible;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 20px;
+      background: $colors-controller-main;
+      border-radius: 18px;
+    }
+  }
+}
